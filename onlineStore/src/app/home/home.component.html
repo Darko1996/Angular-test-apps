@@ -1,0 +1,33 @@
+<app-header></app-header>
+
+<section id="section-1">
+  <div class="containter">
+    <p *ngFor="let alert of alerts">
+      <ngb-alert style="width: 300px; margin:auto" [type]="alert.type" (close)="closeAlert(alert)">{{ alert.message }}</ngb-alert>
+    </p>
+    <div class="row home-body">
+      <ul>
+        <li *ngFor="let product of products | paginate : config">
+          <div class="col-md-auto product"  >
+            <div class="product-heading">
+              <div class="product-heading-1">
+                <img src="{{ product.photos}}" alt="">
+              </div>
+            </div>
+            <div class="product-body">
+              <ul class="p-0">
+                <li>Name: {{ product.name }}</li>
+                <li>Price: {{ product.price }}</li>
+                <li>Unit: {{ product.unit }}</li>
+              </ul>
+            </div>
+            <button class="add" (click)="onAddCart(product)" [ngClass]="{ 'disabled' : !authService.isAuthenticated() }">Add to cart</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <pagination-controls (pageChange)="pageChange($event)" class="my-pagination"></pagination-controls>
+  </div>
+</section>
+
+<app-footer></app-footer>

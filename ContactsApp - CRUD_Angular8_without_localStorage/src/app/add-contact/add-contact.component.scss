@@ -1,0 +1,177 @@
+#section-2 {
+    padding: 34px 130px 85px 130px;
+
+    input.ng-invalid.ng-touched {
+        border: 1px solid red !important;
+    }
+
+    button {
+        min-width: 100%;
+    }
+
+    h1 {
+        text-align: left;
+    }
+
+    a {
+        text-decoration: underline;
+        color: #000000;
+        line-height: 2;
+    }
+
+    .addItemSection {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 0 !important;
+
+        .deleteIcon {
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            padding: 16px 22px 0px 0px;
+
+            svg {
+                margin-right: 0 !important;
+            }
+
+            svg:hover {
+                cursor: pointer;
+                opacity: .7;
+            }
+        }
+    }
+
+
+    .row:first-child {
+        margin-bottom: 32px;
+    }
+
+    .row:last-child {
+        .add-contact-image {
+            height: 115px;
+            width: 177px;
+            border: 2px solid #FF0000;
+            margin-bottom: 30px;
+
+            :hover {
+                cursor: pointer;
+            }
+
+            div p {
+                margin: 0;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 19px;
+            }
+
+            div span {
+                height: 24px;
+                width: 24px;
+                background-image: url(/assets/Add_photo.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                margin-right: 15px;
+            }
+        }
+
+        .add-contact-image-body {
+
+            input {
+                border: 1px solid #000000;
+                height: 50px;
+                width: 280px;
+                max-width: 100%;
+                margin-bottom: 30px;
+                padding: 16px 0px 16px 16px;
+            }
+
+            input::placeholder {
+                color: #000000;
+                font-weight: 500;
+            }
+
+            div:first-child {
+                margin-right: 10px;
+
+                a {
+                    text-decoration: none;
+                    position: relative;
+                    top: -11px;
+                    font-weight: bold;
+                }
+
+
+                div:first-child svg {
+                    margin-right: 9px;
+                    height: 14px;
+                    width: 14px;
+                }
+
+                div:last-child svg {
+                    margin-right: 9px;
+                    height: 14px;
+                    width: 14px;
+                }
+            }
+
+        }
+    }
+}
+
+@media(max-width:1024px) {
+    #section-2 {
+        padding: 34px 60px 85px 60px;
+
+        button {
+            width: 100%;
+        }
+
+        h1 {
+            margin: 20px auto;
+        }
+
+        .row:first-child {
+            margin: auto auto 32px auto;
+        }
+
+        .row:last-child {
+            .add-contact-image {
+                width: 100%;
+            }
+
+            .add-contact-image-body {
+
+                input {
+                    width: 100%;
+                }
+
+                div:first-child {
+                    flex-direction: column;
+                    margin-right: 0;
+
+                    div:first-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+
+        .addItemSection {
+            justify-content: start !important;
+
+            .deleteIcon {
+                right: 0 !important;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:1025px) and (max-width:1300px) {
+    .add-contact-image-body {
+        input {
+            width: 100%;
+        }
+    }
+
+
+}

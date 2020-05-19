@@ -1,0 +1,43 @@
+<!-- <nav class="navbar navbar-expand-lg navbar-light navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" routerLink="/">My Application</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a routerLink="/" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="/news" class="nav-link">News</a>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="/profile" class="nav-link">Profile</a>
+                </li>
+                <li class="nav-item" *ngIf="!userIsAuthenticated">
+                    <a routerLink="/login" class="nav-link">Login</a>
+                </li>
+                <li class="nav-item" *ngIf="userIsAuthenticated" (click)="signOut()">
+                    <a routerLink="/" class="nav-link">Logout</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav> -->
+
+<header class="masthead mb-auto">
+    <div class="inner">
+        <h3 class="masthead-brand">My App</h3>
+        <nav class="nav nav-masthead justify-content-center">
+            <a routerLink="/" class="nav-link">Home</a>
+            <a routerLink="/news" class="nav-link">News</a>
+            <a routerLink="/profile" class="nav-link">Profile</a>
+            <a routerLink="/login" *ngIf="!userIsAuthenticated" class="nav-link">Login</a>
+            <a href="#" class="nav-link" (click)="signOut()" *ngIf="userIsAuthenticated">Logout</a>
+        </nav>
+    </div>
+</header>

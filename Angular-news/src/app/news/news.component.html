@@ -1,0 +1,19 @@
+<div class="container" [@slideIn]>
+  <h1 class="text-center">News</h1>
+
+  <div class="row mb-5" *ngFor="let new of news">
+    <div class="col-md-6 img mb-4">
+      <img src="{{new.image}}"  alt="" class="img-rounded">
+    </div>
+    <div class="col-md-6 mb-4 pl-4 details">
+      <blockquote>
+        <h5>{{new.title}}</h5>
+        <small><cite title="Source Title"> {{new.place}}  <i class="icon-map-marker"></i></cite></small>
+      </blockquote>
+      <p>{{new.description}}</p>
+    </div>
+  </div>
+
+  <!-- spinner -->
+  <div *ngIf="!isLoading" class="lds-ring"><div></div><div></div><div></div><div></div></div>
+</div>

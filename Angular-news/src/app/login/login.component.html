@@ -1,0 +1,11 @@
+<div class="login" [@slideIn]>
+	<h1>Login</h1>
+    <form (submit)="onLogin()" [formGroup]="form">
+    	<input type="text" formControlName="username" name="username" placeholder="Username">
+        <input type="password" formControlName="password" name="password" placeholder="Password">
+        <button type="submit" class="btn btn-primary btn-block btn-large">Let me in.</button>
+    </form>
+    <small *ngIf="!form.valid && form.get('password').touched && form.get('username').touched" class="text-danger">
+        Username or password is incorrect
+    </small> 
+</div>

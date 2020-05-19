@@ -1,0 +1,25 @@
+<section id="Our-projects" >
+    <div>
+        <div class="projekat-naslov">
+            <h6>Our projects</h6>
+            <picture>
+                <a href="#header"><source srcset="../../assets/slika-2.webp" type="image/webp"></a>
+                <a href="#header"><source srcset="../../assets/slika-2.png" type="image/png"></a>
+                <a href="#header"><img src="../../assets/slika-2.png" alt=""></a>
+            </picture>
+        </div>
+    </div>
+
+    <div class="projekti" lightbox-group>
+        <app-loading-spinner *ngIf="showSpinner"></app-loading-spinner>
+        <ul>
+            <li *ngFor="let image of images | async" >
+                    <img src="{{ image.url }}" lightbox > 
+            </li>
+        </ul>
+    </div>
+    <a href="#header">
+        <div class="up">
+                <i class="fas fa-reply"></i>
+        </div>
+    </a>

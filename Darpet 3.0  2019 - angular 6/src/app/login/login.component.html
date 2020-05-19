@@ -1,0 +1,22 @@
+<section [@login]>
+  <div (click)="onHome()"></div>
+  <form #loginform="ngForm" >
+    <h2>Login</h2>
+    <div>
+      <span><img src="../../assets/name.png"></span>
+      <input type="email" #emailControl="ngModel" placeholder="E-mail" required [(ngModel)]="Email" #email="ngModel" required [ngModelOptions]="{standalone: true}">
+
+       <span *ngIf="!email.valid && email.touched" style="color: #fff; position: relative;
+          top: 10px;">Wrong e-mail!</span> 
+    </div>
+    <br>
+    <div>
+      <span><img src="../../assets/password.png"></span>
+      <input type="password" #passwordControl="ngModel" placeholder="Password" required [(ngModel)]="Password" #pass="ngModel" [ngModelOptions]="{standalone: true}" >
+
+      <span *ngIf="!pass.valid && pass.touched" style="color: #fff; position: relative; top: 10px;">Wrong password!</span>
+      <br>
+      <input type="button" value="Next" class="btn close" [disabled]="!loginform.form.valid" (click)="onAdd()">
+    </div>
+  </form>
+</section>

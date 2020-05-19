@@ -1,0 +1,12 @@
+nav {
+    background-color: #fff;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.15);
+    padding: 15px 130px;
+    height: 70px;
+}
+
+@media (max-width: 500px) {
+    nav {
+        padding: 10px 20px;
+    }
+}

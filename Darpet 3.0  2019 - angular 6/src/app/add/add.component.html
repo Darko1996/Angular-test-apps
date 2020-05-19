@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <section>
+      <div (click)="onHome()"></div>
+      <table [@add]>
+          <tr>
+            <td><label for="">Upload images!</label></td>
+          </tr>
+          <tr>
+            <td class="ADD">
+                <input type="file" (change)="handleFiles($event)" multiple>
+            </td>
+          </tr>
+          <tr>
+            <td>
+                <button (click)="uploadFiles()" >Add images</button>
+            </td>
+          </tr>
+      </table>
+  </section>
+  
+
+
+</body>
+</html>
+
+
