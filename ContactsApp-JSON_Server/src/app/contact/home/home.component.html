@@ -1,0 +1,46 @@
+<section id="section-1">
+    
+    <ng-template [ngIf]="status !== ''">
+        <app-popup></app-popup>
+    </ng-template>
+
+    <div class="containter">
+        <div class="row">
+            <div class="col-md-2">
+                <h1>Contacts</h1>
+            </div>
+            <div class="col-md-8"></div>
+            <div class="col-md-2">
+                <a routerLink="/add" class="home-btn"><i class="fal fa-plus"></i>Add</a>
+            </div>
+        </div>
+        <div class="row home-body" >
+            <div class="col-md-auto person" *ngFor="let contact of contacts">
+                <div class="person-heading d-flex align-items-center justify-content-start">
+                    <div class="person-heading-1">
+                        <img src="{{contact.photo}}" alt="">
+                    </div>
+                    <div class="person-heading-2">
+                        <h2>{{contact.first_name}}</h2>
+                        <h2>{{contact.last_name}}</h2>
+                    </div>
+                </div>
+                <div class="person-body">
+                    <h3>E-mail</h3>
+                    <ul>
+                        <li *ngFor="let email of contact.emails"><i class="far fa-envelope"></i>{{email}}</li>
+                    </ul>
+                </div>
+                <div class="person-body">
+                    <h3>Phone</h3>
+                    <ul>
+                        <li *ngFor="let phone of contact.phones"><i class="far fa-phone-alt"></i>{{phone}}</li>
+                    </ul>
+                </div>
+                <a [routerLink]="['/edit', contact.id]" class="edit">Edit</a>
+                <!-- <a class="delete">Delete</a> -->
+            </div>
+        </div>
+    </div>
+</section>
+

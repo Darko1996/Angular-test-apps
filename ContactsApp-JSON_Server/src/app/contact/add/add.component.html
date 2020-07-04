@@ -1,0 +1,70 @@
+<section id="section-2">
+    <div class="container">
+      <form (submit)="AddContact()" [formGroup]="addContactForm">
+        <div class="row align-items-center">
+          <div class="col-md-3">
+            <a routerLink="/">Return to Contacts</a>
+            <h1>Add contact</h1>
+          </div>
+          <div class="col-md-7"></div>
+          <div class="col-md-2">
+          <button type="submit" class="btn btn-primary-active" [disabled]="addContactForm.invalid">Save</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3"></div>
+          <div class="col-md-6 p-0">
+            <div class="add-contact-image d-flex align-items-center text-center">
+              <div class="d-flex align-items-center m-auto">
+                <span></span>
+                <p>Add photo</p>
+              </div>
+            </div>
+            <div class="add-contact-image-body">
+              <div class="d-flex justify-content-between">
+                <div>
+                  <input class="first-name" formControlName="firstName" placeholder="First name" type="text">
+                  <!-- <span class="help-block">Please enter a valid name!</span> -->
+                  <div>
+                    <div formArrayName="emails">
+                      <div class="addItemSection" *ngFor="let email of addContactForm.get('emails')['controls']; let i = index">
+                        <input class="email" type="email" placeholder="E-mail-{{i+1}}" [formControlName]="i">
+  
+                        <span class="deleteIcon" (click)="deleteEmail(i)">
+                          <i class="fas fa-times"></i>
+                        </span>
+                      </div>
+                      <a *ngIf="addContactForm.get('emails')['length'] < 3" (click)="onAddEmail()">
+                        <i class="fal fa-plus" ></i> 
+                        Add email
+                      </a>
+                    </div>
+                  </div>
+                </div>
+  
+                <div>
+                  <input class="last-name" formControlName="lastName" placeholder="Last name" type="text">
+                  <div>
+                    <div formArrayName="phones">
+                      <div class="addItemSection" *ngFor="let phone of addContactForm.get('phones')['controls']; let i = index">
+                          <input class="phone" type="number" placeholder="Phone-{{i+1}}" [formControlName]="i">  
+  
+                          <span class="deleteIcon" (click)="deletePhone(i)">
+                            <i class="fas fa-times"></i>
+                          </span>
+                      </div>
+                      <a *ngIf="addContactForm.get('phones')['length'] < 3" (click)="onAddPhone()">
+                        <i class="fal fa-plus"></i> 
+                        Add phone number
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3"></div>
+        </div>
+      </form>
+    </div>
+  </section>

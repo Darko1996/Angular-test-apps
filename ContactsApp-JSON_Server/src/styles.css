@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+* body {
+  background-color: #F9F9F9;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+}
+
+* body a:hover {
+  opacity: .6;
+  cursor: pointer;
+}
+
+* body h1,
+* body h2,
+* body h3 {
+  color: #000000;
+  font-family: Raleway;
+  text-align: center;
+  font-weight: bold;
+}
+
+* body h1 {
+  font-size: 34px;
+  letter-spacing: 0.03px;
+  line-height: 40px;
+}
+
+* body h2 {
+  font-size: 24px;
+  letter-spacing: 0.02px;
+  line-height: 29px;
+}
+
+* body h3 {
+  font-size: 14px;
+  letter-spacing: 0.01px;
+  line-height: 16px;
+}
+
+* body .inactive {
+  display: none;
+}
+
+* body button {
+  height: 52px;
+  width: 180px;
+}
+
+* body .btn:disabled {
+  opacity: 0.25;
+}
+
+* body .btn:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+* body .btn-primary-disabled {
+  font-weight: bold;
+  border-radius: 0;
+  color: #fff;
+  background-color: #D5D5D5;
+}
+
+* body .btn-primary-active {
+  font-weight: bold;
+  border-radius: 0;
+  color: #fff;
+  background-color: #FF0000;
+}
+
+* body .btn-secondary {
+  background-color: #000000;
+  font-weight: bold;
+  border-radius: 0;
+  color: #fff;
+  font-size: 22px;
+  letter-spacing: 0.02px;
+  line-height: 26px;
+}
+/*# sourceMappingURL=styles.css.map */

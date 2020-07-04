@@ -1,0 +1,72 @@
+{
+  "contacts": [
+    {
+      "first_name": "Afonso",
+      "last_name": "Pinto",
+      "emails": [
+        "mail01@gmail.com",
+        "mail02@gmail.com"
+      ],
+      "phones": [
+        123234566,
+        123234567,
+        123234568
+      ],
+      "photo": "http://lorempixel.com/400/300/people/",
+      "id": 1
+    },
+    {
+      "first_name": "Alexandre",
+      "last_name": "Paiva",
+      "emails": [
+        "mail01@gmail.com"
+      ],
+      "phones": [
+        123234560,
+        123234561
+      ],
+      "id": 2
+    },
+    {
+      "first_name": "Oea",
+      "last_name": "Romana",
+      "emails": [
+        "mail01@gmail.com",
+        "mail02@gmail.com"
+      ],
+      "phones": [
+        123234566,
+        123234567,
+        123234568
+      ],
+      "photo": "http://lorempixel.com/400/300/people/",
+      "id": 3
+    },
+    {
+      "first_name": "Nuria",
+      "last_name": "Pelayo",
+      "emails": [
+        "mail01@gmail.com",
+        "mail02@gmail.com"
+      ],
+      "phones": [
+        123234568
+      ],
+      "photo": "http://lorempixel.com/400/300/people/",
+      "id": 4
+    },
+    {
+      "first_name": "Darko",
+      "last_name": "Lesevic",
+      "emails": [
+        "darkolesevic1@hotmail.com",
+        "darkolesevic2@hotmail.com"
+      ],
+      "phones": [
+        669777138,
+        669777138
+      ],
+      "id": 5
+    }
+  ]
+}
